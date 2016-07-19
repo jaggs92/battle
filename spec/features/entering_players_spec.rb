@@ -4,12 +4,9 @@ feature "Entering players names" do
 let(:player1) { "John" }
 let(:player2) { "Monica" }
 
-
-
   scenario "opens the website" do
     visit("/")
   end
-
 
   scenario "expects a player to fill in his/her name" do
     visit("/")
@@ -21,10 +18,4 @@ let(:player2) { "Monica" }
 
   end
 
-
 end
-
-
-  # add a new Capybara feature test that expects
-  # players to fill in their names (in a form),
-  # submit that form, and see those names on-screen
