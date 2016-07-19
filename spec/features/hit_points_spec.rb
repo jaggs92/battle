@@ -5,10 +5,7 @@ feature "Shows hitpoints for players" do
   let(:player2) { "Damon" }
 
   before do
-    visit("/")
-    fill_in 'player1', :with => player1
-    fill_in 'player2', :with => player2
-    click_button('Submit')
+    sign_in_and_play
   end
 
   scenario "shows player 2's hit points" do

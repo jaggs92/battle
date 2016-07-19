@@ -9,10 +9,7 @@ let(:player2) { "Monica" }
   end
 
   scenario "expects a player to fill in his/her name" do
-    visit("/")
-    fill_in 'player1', :with => player1
-    fill_in 'player2', :with => player2
-    click_button('Submit')
+    sign_in_and_play
     names = "#{player1} + #{player2}"
     expect(page).to have_content(names)
 
