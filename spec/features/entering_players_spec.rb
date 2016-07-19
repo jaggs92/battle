@@ -1,19 +1,24 @@
-describe "Entering players names" do
+require "spec_helper"
+
+feature "Entering players names" do
 let(:player1) { "John" }
 let(:player2) { "Monica" }
 
 
 
-  it "opens the website" do
-    visit"http://localhost:4567/"
+  scenario "opens the website" do
+    visit("/")
   end
 
 
-  it "expects a player to fill in his/her name" do
+  scenario "expects a player to fill in his/her name" do
+    visit("/")
     fill_in 'player1', :with => player1
     fill_in 'player2', :with => player2
     click_button('Submit')
-    expect(page).to have_content(player1, player2)
+    names = "#{player1} + #{player2}"
+    expect(page).to have_content(names)
+
   end
 
 
