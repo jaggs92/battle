@@ -10,7 +10,7 @@ let(:player2) { "Monica" }
 
   scenario "expects a player to fill in his/her name" do
     sign_in_and_play
-    names = "#{player1} + #{player2}"
+    names = "#{player1} vs #{player2}"
     expect(page).to have_content(names)
 
   end

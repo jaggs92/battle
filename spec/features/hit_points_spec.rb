@@ -10,7 +10,7 @@ feature "Shows hitpoints for players" do
 
   scenario "shows player 2's hit points" do
     visit('/play')
-    expect(page).to have_content("#{player2} (100/100)")
+    expect(page).to have_content("#{player2} 60HP")
   end
 
 end
