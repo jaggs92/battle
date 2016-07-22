@@ -2,17 +2,12 @@ require_relative 'player'
 
 class Game
 
-  def initialize(player_1, player_2)
-    @players = [player_1, player_2]
+  attr_reader :name1, :name2
+  def initialize(name1, name2)
+      @name1 = name1
+      @name2 = name2
   end
 
-  def player_1
-    @players.first
-  end
-
-  def player_2
-    @players.last
-  end
 
   def attack(player)
     player.damage_taken
